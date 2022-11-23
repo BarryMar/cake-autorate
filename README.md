@@ -66,7 +66,7 @@ The pinger binary that cake-autorate uses is set using the $pinger_binary variab
 - Install SQM (`luci-app-sqm`) and enable CAKE on the interface(s)
 as described in the
 [OpenWrt SQM documentation](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm)
-- Alternatively, set up your own script to initiate CAKE. For ubnusual setups such as those with WireGuard with PBR, then you may want to consider [cake-dual-ifb](https://github.com/lynxthecat/cake-dual-ifb).
+- Alternatively, set up your own script to initiate CAKE. For unusual setups such as those with WireGuard with PBR, then you may want to consider [cake-dual-ifb](https://github.com/lynxthecat/cake-dual-ifb).
 - [SSH into the router](https://openwrt.org/docs/guide-quick-start/sshadministration)
 - Install with the installer script from this repo,
 copying and pasting each of the commands below:
@@ -84,7 +84,7 @@ copying and pasting each of the commands below:
       | Variable | Setting | 
       |----: |   :-------- | 
       | `ul_if` | Interface that uploads (often `wan`) | `min_ul_shaper_rate_kbps` |
-      | `dl_if` | Interface that uploads data (check `tc qdisc ls`) |
+      | `dl_if` | Interface that downloads data (check `tc qdisc ls`) |
 
   - Set bandwidth variables as described in `cake-autorate-config.sh`.
  
